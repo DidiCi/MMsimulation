@@ -7,12 +7,15 @@ The method was first described and used in the following study: [Ciardo et al. 2
 To use the code, download the repository on your computer and unpack it. Open the repository in Matlab as "Current Folder".
 ### Hardware and OS Requirements
 The simulation and fit require a standard computer with enough RAM to support the in-memory operations. 
-The code has been tested on a computer with the following specifications: 6 cores, 2.60 GHz, 32GB RAM.
-The code has been tested on the following systems: Windows 10 and Ubuntu 20.04.
+The scripts have been tested on a computer with the following specifications: 6 cores, 2.60 GHz, 32GB RAM.
+The scripts have been tested on the following systems: Windows 10 and Ubuntu 20.04.
 ### Software dependencies
-The following Matlab functions/packages are required:
+The scripts have been tested with the following Matlab versions: R2012b and R2020b.
+The following Matlab toolboxes are required:
 ```
-ciao
+Global Optimization Toolbox
+System Identification Toolbox
+Statistics and Machine Learning Toolbox
 ```
 
  
