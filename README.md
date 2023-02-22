@@ -11,6 +11,7 @@ The scripts have been tested on a computer with the following specifications: 6 
 The scripts have been tested on the following systems: Windows 10 and Ubuntu 20.04.
 ### Software dependencies
 The scripts have been tested with the following Matlab versions: R2012b and R2020b.
+
 The following Matlab toolboxes are required:
 ```
 Global Optimization Toolbox
