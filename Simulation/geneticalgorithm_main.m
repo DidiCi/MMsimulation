@@ -25,7 +25,7 @@ load('../Data_extraction/Condition1/exresult.mat');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Custom options for the genetic algorithm%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Check the manual for more information%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-matlabpool open local 4
+%matlabpool open local 4 (for parallel computing if using older versions)
 
 %Positions of integer variables
 % IntCon=[1 2 4 8];
@@ -157,4 +157,5 @@ save(name,'garesult');
 saveas(gcf,[path_out 'ga' num2str(z) '.fig'],'fig');
 toc
 end
-matlabpool close
+
+%matlabpool close (for parallel computing if using older versions)
