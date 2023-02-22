@@ -1,6 +1,7 @@
 # MMsimulation
 ### Description
 A Monte Carlo method coupled to a genetic optimization algorithm to simulate DNA replication and compare the results to experimental data.
+The method was first described and used in the following study: [Ciardo et al. 2021](https://www.mdpi.com/2073-4425/12/8/1224).
 
 ### Installation
 To use the code, download the repository on your computer and unpack it. Open the repository in Matlab as "Current Folder".
