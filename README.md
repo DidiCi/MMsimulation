@@ -10,7 +10,7 @@ The simulation and fit require a standard computer with enough RAM to support th
 The scripts have been tested on a computer with the following specifications: 6 cores, 2.60 GHz, 32GB RAM.
 The scripts have been tested on the following systems: Windows 10 and Ubuntu 20.04.
 ### Software dependencies
-The scripts have been tested with the following Matlab versions: R2012b and R2020b.
+The scripts have been tested with the following Matlab versions: R2020b.
 
 The following Matlab toolboxes are required:
 ```
