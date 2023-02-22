@@ -20,7 +20,7 @@
 
 clear all;
 close all;
-
+addpath('../Functions') 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Variables to modify%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Path to excel data, can contain mutiple path

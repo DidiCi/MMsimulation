@@ -1,5 +1,6 @@
 close all
 clear all
+addpath('../Functions') 
 
 path='../Simulation/'; 
 

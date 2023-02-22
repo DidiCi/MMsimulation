@@ -1,5 +1,6 @@
 clear all;
 close all;
+addpath('../Functions') 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Variables to modify%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Number of variables

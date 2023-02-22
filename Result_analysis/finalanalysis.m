@@ -3,6 +3,7 @@
 %quantities that will be used to produce the images
 clear all;
 close all;
+addpath('../Functions') 
 
 %I load the experimental data already treated in 'Data extraction and global analysis'
 load('../Data_extraction/Condition1/allexDcut.mat');
