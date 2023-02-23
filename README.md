@@ -29,4 +29,4 @@ The scripts must be executed in the following order:
 4. `Images/analysis1`: this script plots the following parameters for experimental and simulated data: replicated fraction f(t), rate of origin firing and fork density were calculated for each molecule as a function of f(t), eye-to-eye distances, eye and gap length distributions; the statistical tests are printed in an excel file;
 5. `Images/analysis2`: when multiple conditions must be compared, this script plots the mean and standard deviations of the simulation parameters for the two conditions; the statistical tests are printed in an excel file.
 
-The third script is the more time-consuming. The expected execution time for an optimization round is about 45min by using 4 workers in parallel and a computer with the specifications listed above.
+The second script is the most time-consuming. The expected execution time for an optimization round is about 45min by using 4 workers in parallel and a computer with the specifications listed above.
