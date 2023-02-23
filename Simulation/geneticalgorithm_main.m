@@ -10,7 +10,7 @@ LB=[1 0 0 0 0 0 0];
 %Upper bounds
 UB=[200 400 1 1 1 500 1];
 %Number of simulations to do
-n_simu=100;
+n_round=3;
 %Path of output
 path_out='Condition1/';
 
@@ -148,7 +148,7 @@ B=[0];
 
 %Set the random number generetor for reproducibility
 rng('shuffle');
-for z=4:n_simu
+for i=1:n_round
 tic,
 clear garesult
 [garesult.x,garesult.fval,garesult.exitflag,garesult.output,garesult.population,garesult.scores] = ga(@(var)simulation_costfunction(var,allexDcut,allnum_pieces,alllength_pieces,file,exresult),nvars,A,B,[],[],LB,UB,[],options);

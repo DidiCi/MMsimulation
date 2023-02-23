@@ -8,16 +8,16 @@ format long
 y_ax={'N_0','J (s^{-1})','P_{in}','P_{out}','P_{local}','d (kb)','\theta'};
 sample_folder={'Condition1' 'Condition2'};
 title_samples={'Ctrl','Depl'};
-num_sample=[3 3];
+n_round=[3 3];
 
-for i=1:num_sample(1)
+for i=1:n_round(1)
     load([path sample_folder{1} '/garesult' num2str(i) '.mat'] );
     sample1_var(i,:)=garesult.x;
     sample1_cost(i)=garesult.fval;
 end
 
 
-for i=1:num_sample(2)
+for i=1:n_round(2)
     load([path sample_folder{2} '/garesult' num2str(i) '.mat']);
     sample2_var(i,:)=garesult.x;
     sample2_cost(i)=garesult.fval;
@@ -33,24 +33,24 @@ linewidth_num=1.5;
 for i=1:7
     subplot(1,7,i)
     hold on
-    errorbar(1,mean(sample1_var(:,i)),std(sample1_var(:,i),1)/sqrt(num_sample(1)),'Marker','o','Color',[.6 .6 .6],'LineWidth',linewidth_num);
-    errorbar(2,mean(sample2_var(:,i)),std(sample2_var(:,i),1)/sqrt(num_sample(2)),'Marker','o','Color','black','LineWidth',linewidth_num);
+    errorbar(1,mean(sample1_var(:,i)),std(sample1_var(:,i),1)/sqrt(n_round(1)),'Marker','o','Color',[.6 .6 .6],'LineWidth',linewidth_num);
+    errorbar(2,mean(sample2_var(:,i)),std(sample2_var(:,i),1)/sqrt(n_round(2)),'Marker','o','Color','black','LineWidth',linewidth_num);
     axis([0 3 -Inf Inf])
     ylabel(y_ax{i},'FontSize',14,'FontName','Arial');
 
-    up=max([mean(sample1_var(:,i))+std(sample1_var(:,i),1)/sqrt(num_sample(1)),mean(sample2_var(:,i))+std(sample2_var(:,i),1)/sqrt(num_sample(2))]);
-    down=min([mean(sample1_var(:,i))-std(sample1_var(:,i),1)/sqrt(num_sample(1)),mean(sample2_var(:,i))-std(sample2_var(:,i),1)/sqrt(num_sample(2))]);
+    up=max([mean(sample1_var(:,i))+std(sample1_var(:,i),1)/sqrt(n_round(1)),mean(sample2_var(:,i))+std(sample2_var(:,i),1)/sqrt(n_round(2))]);
+    down=min([mean(sample1_var(:,i))-std(sample1_var(:,i),1)/sqrt(n_round(1)),mean(sample2_var(:,i))-std(sample2_var(:,i),1)/sqrt(n_round(2))]);
     axis([0 3 down-0.1*down up+0.1*up])
     set(gca,'XTick',[1,2])
     set(gca,'XTickLabel',title_samples)
     
     [p1(i),h1(i)] =ranksum(sample1_var(:,i),sample2_var(:,i));
     [h2(i),p2(i)] = kstest2(sample1_var(:,i),sample2_var(:,i));
-    chi_2(i)=(mean(sample1_var(:,i))-mean(sample2_var(:,i)))^2/((std(sample1_var(:,i),1)/sqrt(num_sample(1)))^2+(std(sample2_var(:,i),1)/sqrt(num_sample(2)))^2);
+    chi_2(i)=(mean(sample1_var(:,i))-mean(sample2_var(:,i)))^2/((std(sample1_var(:,i),1)/sqrt(n_round(1)))^2+(std(sample2_var(:,i),1)/sqrt(n_round(2)))^2);
     mean_values1(i)=mean(sample1_var(:,i));
     mean_values2(i)=mean(sample2_var(:,i));
-    std_values1(i)=std(sample1_var(:,i),1)/sqrt(num_sample(1));
-    std_values2(i)=std(sample2_var(:,i),1)/sqrt(num_sample(2));
+    std_values1(i)=std(sample1_var(:,i),1)/sqrt(n_round(1));
+    std_values2(i)=std(sample2_var(:,i),1)/sqrt(n_round(2));
     hold off
 end
 

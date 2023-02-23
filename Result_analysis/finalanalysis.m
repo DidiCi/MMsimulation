@@ -13,11 +13,11 @@ load('../Data_extraction/Condition1/file.mat');
 load('../Data_extraction/Condition1/exresult.mat');
 
 %Number of simulation in "Simulation" folder
-n_simu=100;
+n_round=3;
 path_in=['../Simulation/Condition1/'];
 path_out=['Condition1/']; 
 
-for NUM_garesult=1:3
+for NUM_garesult=1:n_round
     
 tic,
 sprintf('Treatment of file n. %i',NUM_garesult)
