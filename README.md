@@ -26,7 +26,7 @@ The scripts must be executed in the following order:
 1. `Data_extraction/fittotot.m`: this script is used to extract, process and save the experimental data in a structure array to be used later;
 2. `Simulation/geneticalgorithm_main.m`: this script simulates DNA replication and compares results with experimental data to optimize simulation parameters; the script can perform multiple rounds of optimization;
 3. `Result_analysis/finalanalysis.m`: this script selects for each optimization round the best individual and calculates the parameters to be used for images and statistics;
-4. `Images/analysis1`: this script plots the following parameters for experimental and simulated data: replicated fraction f(t), rate of origin firing and fork density as a function of f(t), eye-to-eye distances, eye and gap length distributions; the statistical tests are printed in an excel file;
-5. `Images/analysis2`: when multiple conditions must be compared, this script plots the mean and standard deviations of the simulation parameters for the two conditions; the statistical tests are printed in an excel file.
+4. `Images/analysis1.m`: this script plots the following parameters for experimental and simulated data: replicated fraction f(t), rate of origin firing and fork density as a function of f(t), eye-to-eye distances, eye and gap length distributions; the statistical tests are printed in an excel file;
+5. `Images/analysis2.m`: when multiple conditions must be compared, this script plots the mean and standard deviations of the simulation parameters for the two conditions; the statistical tests are printed in an excel file.
 
 The second script is the most time-consuming. The expected execution time for an optimization round is about 45min by using 4 workers in parallel and a computer with the specifications listed above.
