@@ -127,7 +127,7 @@ end
 
 %I calculate eye to eye distances and distances between neighborhing eyes
 for i=1:num_pieces
-Dcut(i).etedist=Dcut(i).centre_eyes(2:2:end)-Dcut(i).centre_eyes(1:2:end-1);
+Dcut(i).etedist=Dcut(i).centre_eyes(2:end)-Dcut(i).centre_eyes(1:end-1);
 end
 end
 
