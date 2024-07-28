@@ -148,7 +148,7 @@ B=[0];
 
 %Set the random number generetor for reproducibility
 rng('shuffle');
-for i=1:n_round
+for z=1:n_round
 tic,
 clear garesult
 [garesult.x,garesult.fval,garesult.exitflag,garesult.output,garesult.population,garesult.scores] = ga(@(var)simulation_costfunction(var,allexDcut,allnum_pieces,alllength_pieces,file,exresult),nvars,A,B,[],[],LB,UB,[],options);
